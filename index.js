@@ -1,27 +1,24 @@
-// http://www.omdbapi.com/?apikey=3ee4c002&
-// https://www.omdbapi.com/?apikey=3ee4c002&s=fast
-
 const moviesEl = document.querySelector('.movies')
 const val = document.querySelector('input').value
 
-function search(event) {
+async function search(event) {
     const val = document.querySelector('input').value
     if (event.keyCode === 13) {
-        console.log(val)
+        main(val)
     }
 }
 
-function searchWithButton() {
+async function searchWithButton() {
     const val = document.querySelector('input').value
-        console.log(val)
+    main(val)
 }
 
-async function main() {
+async function main(val) {
     const moviesPromise = await fetch(`https://www.omdbapi.com/?apikey=3ee4c002&s=${val}`)
     const moviesData = await moviesPromise.json()
     const moviesDataNew = moviesData.Search
 
-    moviesEl.innerHTML = moviesData.Search.map(movie => renderMovies(movie)).join('')
+    moviesEl.innerHTML = moviesData.Search.slice(0, 6).map(movie => renderMovies(movie)).join('')
 }
 
 function renderMovies(movie) {
@@ -32,5 +29,3 @@ function renderMovies(movie) {
     <h2 class="movie__title">${movie.Title}</h2>
 </div>`
 }
-
-main()
