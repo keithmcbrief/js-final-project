@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/21a9ab59a8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="nav__container">
+            <figure class="logo__wrapper">
+              <img src="./assets/logo.png" alt="" />
+            </figure>
+            <div class="nav__links">
+              <a class="nav__link" href="#">Home</a>
+              <a class="nav__link" href="#">Find your movie</a>
+              <button class="contact">CONTACT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="landing">
+      <div class="container">
+        <div class="row row__landing">
+          <div class="content__wrapper">
+            <h1 class="title">
+              America's most awarded movie subscription platform
+            </h1>
+            <h2 class="sub-title">
+              FIND YOUR DREAM MOVIE WITH <span class="secondary">BLINKER</span>
+            </h2>
+            <div class="search__wrapper">
+              <input
+                id="searchTxt"
+                class="search__input"
+                type="text"
+                placeholder="Search by Title"
+                onkeyup="search(event)"
+              />
+              <button class="btn__magnifying-glass" onclick="searchWithButton(event)">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <h2 class="results__text">Search results:</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="movies">
+        <div class="container">
+            <div class="row row__movies">
+                <div class="movies">
+                    <div class="movie">
+                        <figure class="movie__img--wrapper">
+                            <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg" alt="">
+                        </figure>
+                        <h2 class="movie__title">Movie Title</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
