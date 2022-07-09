@@ -26,6 +26,6 @@ function renderMovies(movie) {
     <figure class="movie__img--wrapper">
         <img class="movie__img" src=${movie.Poster} alt="">
     </figure>
-    <h2 class="movie__title">${movie.Title}</h2>
+    <h2 class="movie__title">${movie.Title} (${movie.Year})</h2>
 </div>`
 }
